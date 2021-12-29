@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body, .main-div {
+  min-height: 100vh;
+  position: relative;
+  font-family: Raleway !important;
+  background-color: black;
+}
+
+.main-title {
+  padding: 1rem 1rem 1rem 4rem;
+  border-radius: 1rem;
+}
+
+.main-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 30%;
+  background-image: url(assets/domino-background.jpg); /* assets/chess-background.jpg */
+}
+
+.numericFont {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.only-desktop {
+  display: initial;
+}
+
+.only-mobile {
+  display: none;
+}
+
+@media all and (max-width: 575px) {
+  .only-mobile {
+    display: initial;
+  }
+
+  .only-desktop {
+    display: none;
+  }
+
+  .notMobile {
+    display: none;
+  }
+
+  .notMobileEvenly {
+    display: inherit;
+    justify-content: inherit;
+  }
+
+  .main-title {
+    text-align: center;
+    padding-left: 0.5rem;
+  }
+
+  .hidden-in-mobile {
+    display: none;
+  }
+}
+
+
+.notAllowSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+         -o-user-select: none; /* Opera */
+            user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}

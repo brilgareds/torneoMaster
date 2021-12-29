@@ -1,0 +1,60 @@
+
+<h3 class="bg-light main-title">
+  Registrar puntos
+  <small class="text-muted hidden-in-mobile"><span> - </span>Torneo Apertura 2022</small>
+</h3>
+
+<form [formGroup]="scoreForm" (ngSubmit)="saveScore()" class="scoreForm">
+
+  <div class="notMobileEvenly">
+    <div class="team-container col-12 col-sm-5" *ngFor="let team of teams; let i = index">
+      <h5 class="text-center mb-3">Equipo <b>{{ alphabet[i] | uppercase }}</b></h5>
+      <div class="input-group mb-3" style="width: 100%;">
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
+        <span style="border: 1px solid #dedede;" class="form-control">
+          <span *ngFor="let player of team">{{ player.name | titlecase }}<br></span>
+        </span>
+      </div>
+
+      <div style="margin-top: 2rem; margin-bottom: 2rem;">
+        <div style="margin-bottom: 1rem;">
+            <label class="form-label">Puntos obtenidos</label><br/>
+            <input type="number" formControlName="positivePoint_{{i+1}}" (keyup)="possitivePointsUpdated($event)" class="form-control">
+
+            <span *ngIf="positivePointRequiredError(i)" class="form-text text-danger">Formato inválido</span>
+            <span *ngIf="positivePointMaxlenghtError(i)" class="form-text text-danger">Valor máximo permitido es {{  gamesRules.maxPossitivePoints }}</span>
+            <span *ngIf="positivePointMinlenghtError(i)" class="form-text text-danger">Valor minimo permitido es {{  gamesRules.minPossitivePoints }}</span>
+        </div>
+
+        <div [ngClass]="{ 'hidden': !showNegativePoints, notMobile: true }">
+          <label class="form-label">Puntos perdidos</label>
+          <input type="number" formControlName="negativePoint_{{i+1}}" class="form-control">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="notMobileEvenly">
+
+    <div class="col-12 col-sm-5"></div>
+
+    <div class="col-12 col-sm-5">
+      <div class="text-center offset-0 offset-sm-3 offset-md-4 col-12 col-sm-6 col-md-8 mb-5" [ngStyle]="{ 'color': 'red', 'cursor': (!scoreForm.valid) ? 'not-allowed' : 'initial' }">
+        <button type="submit" class="btn btn-md btn-primary" style="width: 100%;" [disabled]="!scoreForm.valid"><i class="fas fa-save"></i> Guardar</button>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+<!-- <div class="d-flex justify-content-between" style="margin-bottom: 1.2rem; width: 100%; font-size: 1.1rem;">
+  <div class="col-4 col-sm-3">
+    <span class="btn btn-outline-info" style="color: white;">Juego 3</span>
+  </div>
+
+  <div class="col-4 col-sm-3" style="text-align: right;">
+    <span class="btn btn-outline-info" style="color: white;">Mesa 7</span>
+  </div>
+</div> -->
+

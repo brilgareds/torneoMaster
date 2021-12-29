@@ -1,0 +1,58 @@
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <span class="only-desktop" style="margin-left: 1.3rem; font-size: 1.2rem;">Torneo Master</span>
+    </div>
+
+    <div class="only-mobile">
+      <h5 class="text-center">Torneo Master</h5>
+    </div>
+
+    <div
+      class="btn-group notAllowSelect"
+      style="cursor: pointer"
+      unselectable="on"
+      onselectstart="return false;"
+      onmousedown="return false;"
+    >
+      <div class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: #dedede; font-size: 23px;">
+        <i class="bi bi-person-circle" style="font-size: 32px; color: #a3a3a3"></i>
+      </div>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><button class="dropdown-item" type="button">Perfil</button></li>
+        <li><button class="dropdown-item" type="button">Cerrar sesion</button></li>
+      </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav" style="padding-top: 1rem; font-size: 0.9rem;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ShowScore">Mesas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="score">Puntuaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="registerScore">Registrar puntuaciones</a>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div class="collapse navbar-collapse" id="profileMenu">
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Dashboard</a>
+        <a class="dropdown-item" href="#">Edit Profile</a>
+        <a class="dropdown-item" href="#">Log Out</a>
+      </div>
+    </div>
+  </div>
+</nav>

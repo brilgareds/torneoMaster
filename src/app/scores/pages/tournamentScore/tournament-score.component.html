@@ -1,0 +1,86 @@
+<h3 class="bg-light main-title">
+  Puntuaciones
+  <small class="text-muted hidden-in-mobile"><span> - </span>Torneo Apertura 2022</small>
+</h3>
+
+<div class="custom-container" style="">
+
+  <div class="players-table">
+
+    <div class="players-table-header">
+      <span>#</span>
+
+      <span>
+        Jugador
+      </span>
+
+      <span>
+        Juegos<br>ganados
+      </span>
+
+      <span>
+        Efectividad
+      </span>
+
+      <span>
+        Puntos<br>realizados
+      </span>
+
+      <span>
+        Puntos<br>perdidos
+      </span>
+
+      <span>
+        Total<br>puntos
+      </span>
+
+    </div>
+
+    <div class="players-table-body">
+
+      <div class="players-table-row" *ngFor="let player of scorePlayers">
+        <span>
+          {{ player.position | number }}
+        </span>
+
+        <span>
+          <div class="input-group" style="width: 100%; padding: 0.5rem 1.5rem 0.5rem 0.2rem;">
+            <span class="container-custom-profile">
+              <span class="custom-profile">
+                <i class="far fa-user"></i>
+              </span>
+            </span>
+            <span style="border: 1px solid #dedede; display: flex; align-items: center;" class="form-control">
+              <span >{{ player.name }} {{ player.lastname }}
+              </span>
+            </span>
+          </div>
+
+
+        </span>
+
+        <span>
+          {{ player.winGames | number }}
+        </span>
+
+        <span>
+          {{ player.efective | number }}
+        </span>
+
+        <span>
+          {{ player.didPoints | number }}
+        </span>
+
+        <span>
+          {{ player.lostPoints | number }}
+        </span>
+
+        <span>
+          {{ player.totalPoints | number }}
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+</div>

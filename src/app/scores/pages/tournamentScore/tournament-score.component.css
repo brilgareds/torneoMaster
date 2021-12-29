@@ -1,0 +1,110 @@
+
+.custom-container {
+  margin-top: 2rem;
+  background-color: white;
+  padding: 2rem 3rem;
+  margin-bottom: 4rem;
+
+  /*
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr))
+  */
+}
+
+.custom-container > span {
+  border: 1px solid #dedede;
+}
+
+.players-table {
+
+}
+
+.players-table > span {
+  display: inline-block;
+}
+
+.players-table-header {
+  align-items: start;
+  border: 1px solid #145b97;
+  background: #145b97;
+  color: white;
+  padding: 0.5rem;
+}
+
+.players-table-row {
+  align-items: center;
+  border: 1px solid #dedede;
+  border-top: 0;
+}
+
+.players-table-header, .players-table-row {
+  display: flex;
+  border-right: 1px solid #dedede;
+  padding-left: 1.5rem;
+}
+
+.container-custom-profile {
+  display: flex;
+  background-color: #f3f3f3;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.font-number {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #a5a5a5;
+  border-radius: 50%;
+  margin: 0.1rem 0.4rem;
+}
+
+.players-table-header > span:nth-child(1), .players-table-row > span:nth-child(1) {
+  width: 2rem;
+}
+
+.players-table-header > span:nth-child(2), .players-table-row > span:nth-child(2) {
+  width: 17rem;
+}
+
+.players-table-header > span:nth-child(3), .players-table-row > span:nth-child(3) {
+  width: 7rem;
+}
+
+.players-table-header > span:nth-child(4), .players-table-row > span:nth-child(4) {
+  width: 7rem;
+}
+
+.players-table-header > span:nth-child(5), .players-table-row > span:nth-child(5) {
+  width: 7rem;
+}
+
+.players-table-header > span:nth-child(6), .players-table-row > span:nth-child(6) {
+  width: 7rem;
+}
+
+.players-table-header > span:nth-child(7), .players-table-row > span:nth-child(7) {
+  width: 7rem;
+}
+
+.players-table-header > span:nth-child(8), .players-table-row > span:nth-child(8) {
+  width: 7rem;
+}
+
+.players-table-row > span:not(:nth-child(2)) {
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.players-table-row {
+
+}

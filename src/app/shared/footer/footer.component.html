@@ -1,0 +1,46 @@
+
+<div
+  class="custom-footer notAllowSelect"
+  unselectable="on"
+  onselectstart="return false;"
+  onmousedown="return false;"
+>
+
+  <div class="divs-footer" style="border-left: 0" (click)="modalChangeGame()">
+    <b class="numericFont" style="font-size: 0.9rem;"><i>Ronda</i></b>
+    <span class="numericFont"> {{ currentGame }}</span>
+  </div>
+
+  <div class="divs-footer" (click)="modalChangeTable()">
+      <b class="numericFont" style="font-size: 0.9rem;"><i>Mesa</i></b>
+      <span class="numericFont"> {{ currentTable }}</span>
+  </div>
+
+  <div class="divs-footer" style="border-right: 0;" (click)="modalChangeTournament()">
+    <b class="numericFont" style="font-size: 0.9rem;"><i>Torneo</i></b>
+    <span class="numericFont"> {{ currentTournament }}</span>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
